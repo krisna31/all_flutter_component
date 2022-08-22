@@ -25,19 +25,54 @@ class MyCard extends StatelessWidget {
             child: Container(
               width: 200,
               height: 200,
-              // color: Colors.white,
               decoration: BoxDecoration(
-                color: const Color(0xff7c94b6),
-                image: const DecorationImage(
-                  image: NetworkImage(
-                      'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
-                  fit: BoxFit.scaleDown,
-                ),
+                color: Colors.white,
                 border: Border.all(
                   color: Colors.black,
                   width: 2,
                 ),
-                borderRadius: BorderRadius.circular(44),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    height: 100,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          topRight: Radius.circular(8)),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(
+                            'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        const Expanded(
+                          child: Center(
+                            child: Text("title"),
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: const <Widget>[
+                              Text("Children"),
+                              Text("Children"),
+                              Text("Children"),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
           ),
