@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
@@ -55,17 +53,31 @@ class MyCard extends StatelessWidget {
                       children: <Widget>[
                         const Expanded(
                           child: Center(
-                            child: Text("title"),
+                            child: Text("TITLE"),
                           ),
                         ),
                         Expanded(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: const <Widget>[
-                              Text("Children"),
-                              Text("Children"),
-                              Text("Children"),
+                            children: <Widget>[
+                              const Expanded(
+                                child: Text("Children"),
+                              ),
+                              Expanded(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: const <Widget>[
+                                    Expanded(
+                                      child: Text("data"),
+                                    ),
+                                    Expanded(
+                                      child: Text("data"),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         )

@@ -1,3 +1,4 @@
+import 'package:all_flutter_component/components/counter_app.dart';
 import 'package:all_flutter_component/components/first_hello_world.dart';
 import 'package:all_flutter_component/components/fourth_card.dart';
 import 'package:all_flutter_component/components/second_row_app.dart';
@@ -15,5 +16,8 @@ void main(List<String> args) {
   // runApp(const ColumnExample());
 
   /// 4. Card Basic Design
-  runApp(const MyCard());
+  // runApp(const MyCard());
+
+  /// 5. Counter App
+  runApp(const CounterApp());
 }
